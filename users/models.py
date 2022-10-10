@@ -26,8 +26,6 @@ class User(AbstractUser):
         (LANGUAGE_Farsi, "Farsi"),
     )
 
-    # CURRENCY_IRR = "IRR"
-
     avatar = models.ImageField(blank=True)
     gender = models.CharField(choices=GENDER_CHOICES, max_length=10, blank=True)
     bio = models.TextField(default="", blank=True)
