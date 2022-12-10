@@ -73,7 +73,6 @@ class RoomAdmin(admin.ModelAdmin):
         "check_in",
         "check_out",
         "instant_book",
-        "count_amenities",
         "count_photos",
         "total_rating",
     )
@@ -108,6 +107,8 @@ class RoomAdmin(admin.ModelAdmin):
 
     def count_photos(self, obj):
         return obj.photos.count()
+
+    count_photos.short_description = "Photo count"
 
 
 @admin.register(models.Photo)
