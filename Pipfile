@@ -9,9 +9,6 @@ pillow = "*"
 django-countries = "*"
 django-seed = "*"
 psycopg2-binary = "*"
-django-dotenv = "*"
-asgiref = "*"
-requests = "*"
 
 [dev-packages]
 
