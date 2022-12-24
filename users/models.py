@@ -40,9 +40,7 @@ class User(AbstractUser):
         (LOGIN_GITHUB, "Github"),
     )
 
-    first_name = models.CharField(
-        _("first name"), max_length=30, blank=True, default="Unnamed User"
-    )
+    first_name = models.CharField(_("first name"), max_length=30, blank=True)
 
     avatar = models.ImageField(blank=True, upload_to="avatars")
     gender = models.CharField(choices=GENDER_CHOICES, max_length=10, blank=True)
