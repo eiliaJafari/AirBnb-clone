@@ -1,3 +1,4 @@
+import uuid
 from django.db import models
 from core import models as core_model
 
@@ -5,9 +6,10 @@ from core import models as core_model
 class List(core_model.TimeStampedModel):
 
     name = models.CharField(max_length=80)
-    user = models.ForeignKey(
-        "users.User", related_name="lists", on_delete=models.CASCADE
+    user = models.OneToOneField(
+        "users.User", related_name="list", on_delete=models.CASCADE, default=uuid.uuid1
     )
+
     rooms = models.ManyToManyField("rooms.Room", related_name="lists", blank=True)
 
     def __str__(self):
