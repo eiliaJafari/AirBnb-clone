@@ -377,8 +377,8 @@ video {
 .btn {
     text-align: center;
     border-radius: .125rem;
-    padding-top: 1.25rem;
-    padding-bottom: 1.25rem
+    padding-top: .5rem;
+    padding-bottom: .5rem
 }
 
 .btn,
