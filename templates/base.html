@@ -22,10 +22,10 @@
             </a>
 
             {% block search-bar %}
-            <form method="get" action="{% url 'rooms:search' %}" class="w-9/12">
-                <input
-                    class="search-box border px-5 py-2 w-full text-sm font-medium text-gray-900 placeholder-gray-600 rounded-lg w-64 shadow-md hover:shadow-lg focus:outline-none"
-                    name="city" placeholder="{% trans 'Search by city:' %}" />
+            <form method="get" action="{% url 'rooms:search' %}" class="w-8/12">
+                <a href="{% url 'rooms:search' %}"
+                    class="search-box border px-5 py-2 w-full text-sm font-medium text-red-700 placeholder-gray-600 rounded-lg w-64 shadow-md hover:shadow-lg focus:outline-none">
+                    Search for rooms</a>
             </form>
             {% endblock search-bar %}
         </div>
