@@ -52,6 +52,7 @@ class User(AbstractUser):
         default=LANGUAGE_Farsi,
     )
 
+    balance = models.IntegerField(default=100000)
     superhost = models.BooleanField(default=False)
     email_verified = models.BooleanField(default=False)
     email_secret = models.CharField(max_length=120, default="", blank=True)
