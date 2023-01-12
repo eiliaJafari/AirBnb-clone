@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2022-12-29 12:20+0330\n"
+"POT-Creation-Date: 2023-01-12 13:48+0330\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -18,14 +18,40 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
 
+#: .\templates\404.html:9
+msgid "Sorry Not found"
+msgstr "متاسفانه این صفحه وجود ندارد"
+
 #: .\templates\base.html:28
-msgid "Search by city:"
-msgstr "جستجوی نام شهر:"
+msgid "Search for rooms"
+msgstr "جستجوی اتاق"
+
+#: .\templates\conversations\conversation_detail.html:4
+msgid "Conversation"
+msgstr "گفتگو"
+
+#: .\templates\conversations\conversation_detail.html:15
+msgid "Conversation between"
+msgstr "گفتگو بین"
+
+#: .\templates\conversations\conversation_detail.html:31
+msgid "no messages"
+msgstr "هیچ پیامی وجود ندارد"
+
+#: .\templates\conversations\conversation_detail.html:57
+msgid "Send Comment"
+msgstr "کامنت ارسال کنید"
+
+#: .\templates\lists\list_detail.html:11
+msgid "Your Favourites"
+msgstr "اتاق های مورد علاقه شما"
 
 #: .\templates\partials\footer.html:5
-msgid
-"This is Ilya Jafari's Bachelor's project supervised by professor Rahmanimanesh"
-msgstr ".این وب سایت، پروژه کارشناسی ایلیا جعفری با راهنمایی استاد رحمانی منش است"
+msgid ""
+"This is Ilya Jafari's Bachelor's project supervised by professor "
+"Rahmanimanesh"
+msgstr ""
+".این وب سایت، پروژه کارشناسی ایلیا جعفری با راهنمایی استاد رحمانی منش است"
 
 #: .\templates\partials\footer.html:7
 msgid "2022 Semnan University, All rights reserved"
@@ -35,33 +61,155 @@ msgstr "دانشگاه سمنان، سال 1401"
 msgid "Language:"
 msgstr "زبان:"
 
-#: .\templates\partials\nav.html:7
+#: .\templates\partials\nav.html:4
+msgid "Balance: "
+msgstr "موجودی"
+
+#: .\templates\partials\nav.html:8
 msgid "Stop hosting"
 msgstr "خروج از حالت میزبانی"
 
-#: .\templates\partials\nav.html:9
+#: .\templates\partials\nav.html:10
 msgid "Start hosting"
 msgstr "ورود به حالت میزبانی"
 
-#: .\templates\partials\nav.html:14
+#: .\templates\partials\nav.html:15
 msgid "Create Room"
 msgstr "ایجاد اتاق"
 
-#: .\templates\partials\nav.html:16
+#: .\templates\partials\nav.html:17
+msgid "Favs"
+msgstr "مورد علاقه"
+
+#: .\templates\partials\nav.html:19
 msgid "Profile"
 msgstr "پروفایل"
 
-#: .\templates\partials\nav.html:17
+#: .\templates\partials\nav.html:20
 msgid "Log out"
 msgstr "خروج از حساب کاربری"
 
-#: .\templates\partials\nav.html:19
+#: .\templates\partials\nav.html:22
 msgid "Log in"
 msgstr "ورود کاربر"
 
-#: .\templates\partials\nav.html:20
+#: .\templates\partials\nav.html:23 .\templates\users\login.html:20
 msgid "Sign up"
 msgstr "ثبت نام"
+
+#: .\templates\partials\social_login.html:4
+msgid "Continue with Github"
+msgstr "ادامه با گیت هاب"
+
+#: .\templates\partials\social_login.html:10
+msgid "Or"
+msgstr "یا"
+
+#: .\templates\reservations\detail.html:33
+msgid "Contact your Host"
+msgstr "با میزبان خود تماس بگیرید"
+
+#: .\templates\reservations\detail.html:35
+msgid "Send a Message"
+msgstr "پیام ارسال کنید"
+
+#: .\templates\reservations\detail.html:42
+msgid "Write your review"
+msgstr "نقد خود را یادداشت کنید"
+
+#: .\templates\reservations\detail.html:46
+msgid "Submit Review"
+msgstr "نقد خود را ثبت کنید"
+
+#: .\templates\reservations\detail.html:50
+msgid "Cancel Reservation"
+msgstr "رزرواسیون را کنسل کنید"
+
+#: .\templates\reservations\detail.html:52
+msgid "Confirm Reservation"
+msgstr "رزرواسیون را تایید کنید"
+
+#: .\templates\rooms\room_detail.html:37
+msgid "Remove from Favourites"
+msgstr "از مورد علاقه حذف شود"
+
+#: .\templates\rooms\room_detail.html:40
+msgid "Save to Favourites"
+msgstr "در مورد علاقه ذخیره شود"
+
+#: .\templates\rooms\room_detail.html:56
+msgid "Amenities"
+msgstr "امکانات رفاهی"
+
+#: .\templates\rooms\room_detail.html:62
+msgid "Facilities"
+msgstr "تسهیلات"
+
+#: .\templates\rooms\room_detail.html:68
+msgid "House Rules"
+msgstr "قوانین"
+
+#: .\templates\rooms\room_detail.html:74
+msgid "Reviews"
+msgstr "نقد و بررسی"
+
+#: .\templates\rooms\room_detail.html:103
+#, fuzzy
+#| msgid "Create Room"
+msgid "Edit Room"
+msgstr "ایجاد اتاق"
+
+#: .\templates\rooms\room_edit.html:17
+msgid "Edit Photos"
+msgstr "تغییر عکس"
+
+#: .\templates\rooms\room_photos.html:14
+msgid "Upload Photo"
+msgstr "آپلود عکس"
+
+#: .\templates\rooms\room_photos.html:24
+msgid "Edit"
+msgstr "تغییر"
+
+#: .\templates\rooms\room_photos.html:25
+msgid "Delete"
+msgstr "حذف"
+
+#: .\templates\rooms\room_photos.html:31
+msgid "Back to edit room"
+msgstr "بازگشت به صفحه قبل"
+
+#: .\templates\rooms\search.html:15
+msgid "Search"
+msgstr "جستجو"
+
+#: .\templates\rooms\search.html:21
+msgid "Results"
+msgstr "نتایج"
+
+#: .\templates\users\login.html:19
+msgid "Don't have an account"
+msgstr "آیا اکانتی ندارید"
+
+#: .\templates\users\signup.html:20
+msgid "Have an account"
+msgstr "اکانت بسازید"
+
+#: .\templates\users\signup.html:21
+msgid "Login"
+msgstr "لاگین"
+
+#: .\templates\users\update-profile.html:18
+msgid "Change Password"
+msgstr "پسورد را تغییر دهید"
+
+#: .\templates\users\user_detail.html:25
+msgid "Edit Profile"
+msgstr "تغییر مشخصات"
+
+#: .\templates\users\user_detail.html:30
+msgid "'s Rooms"
+msgstr " اتاق های "
 
 #: .\users\mixins.py:13
 msgid "Can't go there"
@@ -104,6 +252,9 @@ msgstr "درباره من"
 #| msgid "Language:"
 msgid "language"
 msgstr "زبان:"
+
+#~ msgid "Search by city:"
+#~ msgstr "جستجوی نام شهر:"
 
 #, python-format
 #~ msgid "Page %(current_page)s of %(total_pages)s"
