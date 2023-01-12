@@ -1,4 +1,5 @@
 import datetime
+from django.utils.translation import gettext_lazy as _
 from django.contrib.auth.decorators import login_required
 from django.http import Http404
 from django.views.generic import View
@@ -22,7 +23,7 @@ def create(request, room, year, month, day):
         models.BookedDay.objects.get(day=date_obj, reservation__room=room)
         raise CreateError()
     except (room_models.Room.DoesNotExist, CreateError):
-        messages.error(request, "Can't Reserve That Room")
+        messages.error(request, _("Can't Reserve That Room"))
         return redirect(reverse("core:home"))
     except models.BookedDay.DoesNotExist:  # type: ignore
         reservation = models.Reservation.objects.create(
@@ -63,5 +64,5 @@ def edit_reservation(request, pk, verb):
         reservation.status = models.Reservation.STATUS_CANCELED
         models.BookedDay.objects.filter(reservation=reservation).delete()
     reservation.save()
-    messages.success(request, "Reservation Updated")
+    messages.success(request, _("Reservation Updated"))
     return redirect(reverse("reservations:detail", kwargs={"pk": reservation.pk}))

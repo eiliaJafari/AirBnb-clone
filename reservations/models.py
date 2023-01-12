@@ -1,4 +1,5 @@
 import datetime
+from django.utils.translation import gettext_lazy as _
 from django.db import models
 from django.utils import timezone
 from core import models as core_models
@@ -10,8 +11,8 @@ class BookedDay(core_models.TimeStampedModel):
     reservation = models.ForeignKey("Reservation", on_delete=models.CASCADE)
 
     class Meta:
-        verbose_name = "Booked Day"
-        verbose_name_plural = "Booked Days"
+        verbose_name = _("Booked Day")
+        verbose_name_plural = _("Booked Days")
 
     def __str__(self):
         return str(self.day)
@@ -24,16 +25,16 @@ class Reservation(core_models.TimeStampedModel):
     STATUS_CANCELED = "canceled"
 
     STATUS_CHOICES = (
-        (STATUS_PENDING, "pending"),
-        (STATUS_CONFIRMED, "confirmed"),
-        (STATUS_CANCELED, "canceled"),
+        (STATUS_PENDING, _("pending")),
+        (STATUS_CONFIRMED, _("confirmed")),
+        (STATUS_CANCELED, _("canceled")),
     )
 
     status = models.CharField(
-        max_length=12, choices=STATUS_CHOICES, default=STATUS_PENDING
+        _("status"), max_length=12, choices=STATUS_CHOICES, default=STATUS_PENDING
     )
-    check_in = models.DateField()
-    check_out = models.DateField()
+    check_in = models.DateField(_("check_in"))
+    check_out = models.DateField(_("check_out"))
     guest = models.ForeignKey(
         "users.User", related_name="reservations", on_delete=models.CASCADE
     )

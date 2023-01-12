@@ -1,5 +1,6 @@
 import uuid
 from django.db import models
+from django.utils.translation import gettext_lazy as _
 from core import models as core_model
 
 
@@ -18,4 +19,4 @@ class List(core_model.TimeStampedModel):
     def count_rooms(self):
         return self.rooms.count()
 
-    count_rooms.short_description = "Number of Rooms"
+    count_rooms.short_description = _("Number of Rooms")

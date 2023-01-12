@@ -32,18 +32,18 @@ class User(AbstractUser):
     LOGIN_GITHUB = "github"
 
     LOGIN_CHOICES = (
-        (LOGIN_EMAIL, "Email"),
-        (LOGIN_GITHUB, "Github"),
+        (LOGIN_EMAIL, _("Email")),
+        (LOGIN_GITHUB, _("Github")),
     )
 
     first_name = models.CharField(_("first name"), max_length=30, blank=True)
 
-    avatar = models.ImageField(upload_to="avatars", blank=True)
+    avatar = models.ImageField(_("avatar"), upload_to="avatars", blank=True)
     gender = models.CharField(
         _("gender"), choices=GENDER_CHOICES, max_length=10, blank=True
     )
     bio = models.TextField(_("bio"), blank=True)
-    birthdate = models.DateField(blank=True, null=True)
+    birthdate = models.DateField(_("birthdate"), blank=True, null=True)
     language = models.CharField(
         _("language"),
         choices=LANGUAGE_CHOICES,
@@ -52,8 +52,8 @@ class User(AbstractUser):
         default=LANGUAGE_Farsi,
     )
 
-    balance = models.IntegerField(default=100000)
-    superhost = models.BooleanField(default=False)
+    balance = models.IntegerField(_("balance"), default=100000)
+    superhost = models.BooleanField(_("superhost"), default=False)
     email_verified = models.BooleanField(default=False)
     email_secret = models.CharField(max_length=120, default="", blank=True)
     login_method = models.CharField(

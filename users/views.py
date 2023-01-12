@@ -1,5 +1,6 @@
 import os
 import requests
+from django.utils.translation import gettext_lazy as _
 from django.utils import translation
 from django.http import HttpResponse
 from django.contrib.auth.views import PasswordChangeView
@@ -35,7 +36,7 @@ class LoginView(mixins.LoggedOutOnlyView, FormView):
 
 
 def log_out(request):
-    messages.info(request, "See you later")
+    messages.info(request, _("See you later"))
     logout(request)
     return redirect(reverse("core:home"))
 
@@ -156,7 +157,7 @@ class UpdateProfileView(mixins.LoggedInOnlyView, SuccessMessageMixin, UpdateView
         "birthdate",
         "language",
     )
-    success_message = "Profile Updated"
+    success_message = _("Profile Updated")
 
     def get_object(self, queryset=None):
         return self.request.user
@@ -179,7 +180,7 @@ class UpdatePasswordView(
 ):
 
     template_name = "users/update-password.html"
-    success_message = "Password Updated"
+    success_message = _("Password Updated")
 
     def get_form(self, form_class=None):
         form = super().get_form(form_class=form_class)

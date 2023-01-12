@@ -1,4 +1,5 @@
 from django.contrib import messages
+from django.utils.translation import gettext_lazy as _
 from django.urls import reverse
 from django.shortcuts import redirect
 from rooms import models as room_models
@@ -16,5 +17,5 @@ def create_review(request, room):
             review.room = room
             review.user = request.user
             review.save()
-            messages.success(request, "Room reviewed")
+            messages.success(request, _("Room reviewed"))
             return redirect(reverse("rooms:detail", kwargs={"pk": room.pk}))

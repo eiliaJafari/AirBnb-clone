@@ -1,4 +1,5 @@
 from django.utils import timezone
+from django.utils.translation import gettext_lazy as _
 from django.db import models
 from django.urls import reverse
 from django_countries.fields import CountryField
@@ -10,7 +11,7 @@ class AbstractItem(core_models.TimeStampedModel):
 
     """Abstract Item"""
 
-    name = models.CharField(max_length=80)
+    name = models.CharField("name", max_length=80)
 
     class Meta:
         abstract = True
@@ -24,7 +25,7 @@ class RoomType(AbstractItem):
     """RoomType Model Definition"""
 
     class Meta:
-        verbose_name = "Room Type"
+        verbose_name = _("Room Type")
 
 
 class Amenity(AbstractItem):
@@ -32,7 +33,7 @@ class Amenity(AbstractItem):
     """Amenity Model Definition"""
 
     class Meta:
-        verbose_name_plural = "Amenities"
+        verbose_name_plural = _("Amenities")
 
 
 class Facility(AbstractItem):
@@ -42,7 +43,7 @@ class Facility(AbstractItem):
     pass
 
     class Meta:
-        verbose_name_plural = "Facilities"
+        verbose_name_plural = _("Facilities")
 
 
 class HouseRule(AbstractItem):
@@ -50,15 +51,15 @@ class HouseRule(AbstractItem):
     """HouseRule Model Definition"""
 
     class Meta:
-        verbose_name = "House Rule"
+        verbose_name = _("House Rule")
 
 
 class Photo(core_models.TimeStampedModel):
 
     """Photo Model Definition"""
 
-    caption = models.CharField(max_length=80)
-    file = models.ImageField(upload_to="room_photos")
+    caption = models.CharField(_("caption"), max_length=80)
+    file = models.ImageField(_("file"), upload_to="room_photos")
     room = models.ForeignKey("Room", related_name="photos", on_delete=models.CASCADE)
 
     def __str__(self):
@@ -69,19 +70,37 @@ class Room(core_models.TimeStampedModel):
 
     """Room Model Definition"""
 
-    name = models.CharField(max_length=140)
-    description = models.TextField()
-    country = CountryField()
-    city = models.CharField(max_length=80)
-    price = models.IntegerField()
-    address = models.CharField(max_length=140)
-    guests = models.IntegerField(help_text="How many people will be staying?")
-    beds = models.IntegerField()
-    bedrooms = models.IntegerField()
-    baths = models.IntegerField()
-    check_in = models.TimeField()
-    check_out = models.TimeField()
-    instant_book = models.BooleanField(default=False)
+    name = models.CharField(_("name"), max_length=140)
+    description = models.TextField(
+        _("description"),
+    )
+    country = CountryField(
+        _("country"),
+    )
+    city = models.CharField(_("city"), max_length=80)
+    price = models.IntegerField(
+        _("price"),
+    )
+    address = models.CharField(_("address"), max_length=140)
+    guests = models.IntegerField(
+        _("guests"), help_text=_("How many people will be staying?")
+    )
+    beds = models.IntegerField(
+        _("beds"),
+    )
+    bedrooms = models.IntegerField(
+        _("bedrooms"),
+    )
+    baths = models.IntegerField(
+        _("baths"),
+    )
+    check_in = models.TimeField(
+        _("check_in"),
+    )
+    check_out = models.TimeField(
+        _("check_out"),
+    )
+    instant_book = models.BooleanField(_("instant_book"), default=False)
     host = models.ForeignKey(
         "users.User", related_name="rooms", on_delete=models.CASCADE
     )

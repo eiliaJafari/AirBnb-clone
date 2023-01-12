@@ -1,5 +1,6 @@
 from django import forms
 from django_countries.fields import CountryField
+from django.utils.translation import gettext_lazy as _
 from . import models
 
 
@@ -45,22 +46,22 @@ class CreateRoomForm(forms.ModelForm):
         model = models.Room
         fields = (
             "name",
-            "description",
-            "country",
-            "city",
-            "price",
-            "address",
-            "guests",
-            "beds",
-            "bedrooms",
-            "baths",
-            "check_in",
-            "check_out",
-            "instant_book",
-            "room_type",
-            "amenities",
-            "facilities",
-            "house_rules",
+            ("description"),
+            ("country"),
+            ("city"),
+            ("price"),
+            ("address"),
+            ("guests"),
+            ("beds"),
+            ("bedrooms"),
+            ("baths"),
+            ("check_in"),
+            ("check_out"),
+            ("instant_book"),
+            ("room_type"),
+            ("amenities"),
+            ("facilities"),
+            ("house_rules"),
         )
 
     def save(self, *args, **kwargs):

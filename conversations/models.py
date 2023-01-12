@@ -1,4 +1,5 @@
 from django.db import models
+from django.utils.translation import gettext_lazy as _
 from core import models as core_models
 
 
@@ -17,12 +18,12 @@ class Conversation(core_models.TimeStampedModel):
     def count_messages(self):
         return self.messages.count()  # type: ignore
 
-    count_messages.short_description = "Number of messages"
+    count_messages.short_description = _("Number of messages")
 
     def count_participants(self):
         return self.participants.count()
 
-    count_participants.short_description = "Number of participants"
+    count_participants.short_description = _("Number of participants")
 
 
 class Message(core_models.TimeStampedModel):

@@ -13,13 +13,13 @@ class CreateReviewForm(forms.ModelForm):
     class Meta:
         model = models.Review
         fields = (
-            "review",
-            "accuracy",
-            "communication",
-            "cleanliness",
-            "location",
-            "check_in",
-            "value",
+            ("review"),
+            ("accuracy"),
+            ("communication"),
+            ("cleanliness"),
+            ("location"),
+            ("check_in"),
+            ("value"),
         )
 
     def save(self):

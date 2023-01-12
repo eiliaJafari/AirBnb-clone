@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-01-12 13:48+0330\n"
+"POT-Creation-Date: 2023-01-12 16:01+0330\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -17,6 +17,203 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
+
+#: .\conversations\forms.py:8
+msgid "Add a Comment"
+msgstr "کامنت ارسال کنید"
+
+#: .\conversations\models.py:21
+msgid "Number of messages"
+msgstr "هیچ پیامی وجود ندارد"
+
+#: .\conversations\models.py:26
+msgid "Number of participants"
+msgstr "تعداد افراد در حال مکالمه"
+
+#: .\lists\models.py:22
+msgid "Number of Rooms"
+msgstr "تعداد اتاق ها"
+
+#: .\reservations\models.py:14
+msgid "Booked Day"
+msgstr "روز رزرو شده"
+
+#: .\reservations\models.py:15
+msgid "Booked Days"
+msgstr "روز های رزرو شده"
+
+#: .\reservations\models.py:28
+msgid "pending"
+msgstr "در حال بررسی"
+
+#: .\reservations\models.py:29
+msgid "confirmed"
+msgstr "تایید شده"
+
+#: .\reservations\models.py:30
+msgid "canceled"
+msgstr "کنسل شده"
+
+#: .\reservations\models.py:34
+msgid "status"
+msgstr "وضعیت"
+
+#: .\reservations\models.py:36 .\reviews\models.py:25 .\rooms\models.py:98
+#: .\rooms\views.py:84
+msgid "check_in"
+msgstr "ساعت ورود"
+
+#: .\reservations\models.py:37 .\rooms\models.py:101 .\rooms\views.py:85
+msgid "check_out"
+msgstr "ساعت خروج"
+
+#: .\reservations\views.py:26
+msgid "Can't Reserve That Room"
+msgstr "آن اتاق قابل رزرو کردن نیست"
+
+#: .\reservations\views.py:67
+msgid "Reservation Updated"
+msgstr "رزرواسیون بروز شد"
+
+#: .\reviews\models.py:10 .\templates\rooms\room_detail.html:83
+msgid "review"
+msgstr "نقد و بررسی"
+
+#: .\reviews\models.py:13
+msgid "accuracy"
+msgstr "تطابق"
+
+#: .\reviews\models.py:16
+msgid "communication"
+msgstr "ارتباطات"
+
+#: .\reviews\models.py:19
+msgid "cleanliness"
+msgstr "تمیزی"
+
+#: .\reviews\models.py:22
+msgid "location"
+msgstr "موقعیت مکانی"
+
+#: .\reviews\models.py:28
+msgid "value"
+msgstr "ارزش"
+
+#: .\reviews\models.py:52
+msgid "Avg."
+msgstr "میانگین"
+
+#: .\reviews\views.py:20
+msgid "Room reviewed"
+msgstr "نقد شما ثبت شد"
+
+#: .\rooms\forms.py:35 .\rooms\models.py:61
+msgid "caption"
+msgstr "کپشن"
+
+#: .\rooms\forms.py:35 .\rooms\models.py:62
+msgid "file"
+msgstr "فایل"
+
+#: .\rooms\models.py:28
+msgid "Room Type"
+msgstr "نوع اتاق"
+
+#: .\rooms\models.py:36 .\templates\rooms\room_detail.html:56
+msgid "Amenities"
+msgstr "امکانات رفاهی"
+
+#: .\rooms\models.py:46 .\templates\rooms\room_detail.html:62
+msgid "Facilities"
+msgstr "تسهیلات"
+
+#: .\rooms\models.py:54
+msgid "House Rule"
+msgstr "قوانین"
+
+#: .\rooms\models.py:73 .\rooms\views.py:74
+msgid "name"
+msgstr "نام"
+
+#: .\rooms\models.py:75 .\rooms\views.py:75
+msgid "description"
+msgstr "توضیحات"
+
+#: .\rooms\models.py:78 .\rooms\views.py:76
+msgid "country"
+msgstr "کشور"
+
+#: .\rooms\models.py:80 .\rooms\views.py:77
+msgid "city"
+msgstr "شهر"
+
+#: .\rooms\models.py:82 .\rooms\views.py:78
+msgid "price"
+msgstr "قیمت"
+
+#: .\rooms\models.py:84 .\rooms\views.py:79
+msgid "address"
+msgstr "آدرس"
+
+#: .\rooms\models.py:86 .\rooms\views.py:80
+msgid "guests"
+msgstr "تعداد مهمان"
+
+#: .\rooms\models.py:86
+msgid "How many people will be staying?"
+msgstr "چه تعداد افراد سکونت خواهند داشت؟"
+
+#: .\rooms\models.py:89 .\rooms\views.py:81
+msgid "beds"
+msgstr "تعداد تخت"
+
+#: .\rooms\models.py:92 .\rooms\views.py:82
+msgid "bedrooms"
+msgstr "تعداد اتاق"
+
+#: .\rooms\models.py:95 .\rooms\views.py:83
+msgid "baths"
+msgstr "تعداد دستشویی"
+
+#: .\rooms\models.py:103 .\rooms\views.py:86
+msgid "instant_book"
+msgstr "رزرو فوری"
+
+#: .\rooms\views.py:87
+msgid "room_type"
+msgstr "نوع اتاق"
+
+#: .\rooms\views.py:88
+msgid "amenities"
+msgstr "امکانات رفاهی"
+
+#: .\rooms\views.py:89
+msgid "facilities"
+msgstr "تسهیلات"
+
+#: .\rooms\views.py:90
+msgid "house_rules"
+msgstr "قوانین"
+
+#: .\rooms\views.py:118
+msgid "Cant delete that photo"
+msgstr "این تصویر نمیتواند حذف شود"
+
+#: .\rooms\views.py:121
+msgid "Photo Deleted"
+msgstr "تصویر حذف شد"
+
+#: .\rooms\views.py:132
+msgid "Photo Updated"
+msgstr "تصویر بروز شد"
+
+#: .\rooms\views.py:148
+msgid "Photo Uploaded"
+msgstr "تصویر بارگذاری شد"
+
+#: .\rooms\views.py:162
+msgid "Room Uploaded"
+msgstr "اتاق بارگذاری شد"
 
 #: .\templates\404.html:9
 msgid "Sorry Not found"
@@ -45,6 +242,10 @@ msgstr "کامنت ارسال کنید"
 #: .\templates\lists\list_detail.html:11
 msgid "Your Favourites"
 msgstr "اتاق های مورد علاقه شما"
+
+#: .\templates\mixins\room_card.html:9
+msgid "Superhost"
+msgstr "میزبان نمونه"
 
 #: .\templates\partials\footer.html:5
 msgid ""
@@ -137,14 +338,6 @@ msgstr "از مورد علاقه حذف شود"
 msgid "Save to Favourites"
 msgstr "در مورد علاقه ذخیره شود"
 
-#: .\templates\rooms\room_detail.html:56
-msgid "Amenities"
-msgstr "امکانات رفاهی"
-
-#: .\templates\rooms\room_detail.html:62
-msgid "Facilities"
-msgstr "تسهیلات"
-
 #: .\templates\rooms\room_detail.html:68
 msgid "House Rules"
 msgstr "قوانین"
@@ -154,10 +347,8 @@ msgid "Reviews"
 msgstr "نقد و بررسی"
 
 #: .\templates\rooms\room_detail.html:103
-#, fuzzy
-#| msgid "Create Room"
 msgid "Edit Room"
-msgstr "ایجاد اتاق"
+msgstr "تغییر اتاق"
 
 #: .\templates\rooms\room_edit.html:17
 msgid "Edit Photos"
@@ -193,7 +384,7 @@ msgstr "آیا اکانتی ندارید"
 
 #: .\templates\users\signup.html:20
 msgid "Have an account"
-msgstr "اکانت بسازید"
+msgstr "آیا اکانت دارید"
 
 #: .\templates\users\signup.html:21
 msgid "Login"
@@ -210,6 +401,54 @@ msgstr "تغییر مشخصات"
 #: .\templates\users\user_detail.html:30
 msgid "'s Rooms"
 msgstr " اتاق های "
+
+#: .\users\forms.py:8 .\users\forms.py:35 .\users\models.py:35
+msgid "Email"
+msgstr "ایمیل"
+
+#: .\users\forms.py:10 .\users\forms.py:39
+msgid "Password"
+msgstr "پسورد"
+
+#: .\users\forms.py:22
+msgid "Password is wrong"
+msgstr "پسورد اشتباه است"
+
+#: .\users\forms.py:25
+msgid "User does not exist"
+msgstr "کاربر وجود ندارد"
+
+#: .\users\forms.py:33
+msgid "first_name"
+msgstr "نام"
+
+#: .\users\forms.py:33
+msgid "First Name"
+msgstr "نام"
+
+#: .\users\forms.py:34
+msgid "last_name"
+msgstr "نام خانوادگی"
+
+#: .\users\forms.py:34
+msgid "Last Name"
+msgstr "نام خانوادگی"
+
+#: .\users\forms.py:35
+msgid "email"
+msgstr "ایمیل"
+
+#: .\users\forms.py:42
+msgid "Confirm Password"
+msgstr "تایید پسورد"
+
+#: .\users\forms.py:50
+msgid "That email is already taken"
+msgstr "این ایمیل وجود دارد"
+
+#: .\users\forms.py:60
+msgid "Password confirmation does not match!"
+msgstr "!پسورد تطابق ندارد"
 
 #: .\users\mixins.py:13
 msgid "Can't go there"
@@ -235,9 +474,17 @@ msgstr "انگلیسی"
 msgid "Farsi"
 msgstr "فارسی"
 
+#: .\users\models.py:36
+msgid "Github"
+msgstr "گیت هاب"
+
 #: .\users\models.py:39
 msgid "first name"
 msgstr "نام"
+
+#: .\users\models.py:41
+msgid "avatar"
+msgstr "آواتار"
 
 #: .\users\models.py:43
 msgid "gender"
@@ -247,15 +494,30 @@ msgstr "جنسیت"
 msgid "bio"
 msgstr "درباره من"
 
+#: .\users\models.py:46
+msgid "birthdate"
+msgstr "تاریخ تولد"
+
 #: .\users\models.py:48
-#, fuzzy
-#| msgid "Language:"
 msgid "language"
 msgstr "زبان:"
 
-#~ msgid "Search by city:"
-#~ msgstr "جستجوی نام شهر:"
+#: .\users\models.py:55
+msgid "balance"
+msgstr "موجودی"
 
-#, python-format
-#~ msgid "Page %(current_page)s of %(total_pages)s"
-#~ msgstr "صفحه %(current_page) از %(total_pages)"
+#: .\users\models.py:56
+msgid "superhost"
+msgstr "میزبان نمونه"
+
+#: .\users\views.py:39
+msgid "See you later"
+msgstr "به امید دیدار"
+
+#: .\users\views.py:160
+msgid "Profile Updated"
+msgstr "پروفایل بروز شد"
+
+#: .\users\views.py:183
+msgid "Password Updated"
+msgstr "پسورد بروز شد"
